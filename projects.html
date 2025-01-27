@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Projects</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Sidebar -->
+      <aside class="sidebar">
+        <h2>Enhance</h2>
+        <ul>
+          <li onclick="showProject(0)">Hyderabad</li>
+          <li onclick="showProject(1)">Vijayawada</li>
+          <li onclick="showProject(2)">Vizag</li>
+        </ul>
+      </aside>
+
+      <!-- Right Content -->
+      <div class="content">
+        <div class="slideshow">
+          <img
+            id="slideshow-image"
+            src="./images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg"
+            alt="Project Image"
+          />
+        </div>
+        <div class="project-description">
+          <h3 id="project-title">Project, City and state</h3>
+          <p id="project-text">
+            This project was made using HTML, CSS, and JavaScript...
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

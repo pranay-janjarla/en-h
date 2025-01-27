@@ -1,31 +1,103 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const carousel = document.querySelector(".carousel");
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+// Data of projects
+const projects = [
+  {
+    title: "Project, City and state",
+    description: "This project was made using HTML, CSS, and JavaScript...",
+    images: [
+      "./images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg",
+      "./images/jossuha-theophile-U2JgZnfAEBE-unsplash.jpg",
+      "./images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg",
+    ],
+  },
+  {
+    title: "Project, City and state",
+    description: "This project was made using React and Node.js...",
+    images: [
+      "./images/victor-wJ4kpIZOjtE-unsplash.jpg",
+      "./images/jossuha-theophile-U2JgZnfAEBE-unsplash.jpg",
+      "./images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg",
+    ],
+  },
+  {
+    title: "Project, City and state",
+    description: "This project was made using Python and Flask...",
+    images: [
+      "./images/justin-chrn-DaQcLTlz83k-unsplash.jpg",
+      "./images/jossuha-theophile-U2JgZnfAEBE-unsplash.jpg",
+      "./images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg",
+    ],
+  },
+  {
+    title: "Project, City and state",
+    description: "This project was made using Python and Flask...",
+    images: [
+      "./images/justin-chrn-DaQcLTlz83k-unsplash.jpg",
+      "./images/jossuha-theophile-U2JgZnfAEBE-unsplash.jpg",
+      "./images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg",
+    ],
+  },
+  {
+    title: "Project, City and state",
+    description: "This project was made using Python and Flask...",
+    images: [
+      "./images/justin-chrn-DaQcLTlz83k-unsplash.jpg",
+      "./images/jossuha-theophile-U2JgZnfAEBE-unsplash.jpg",
+      "./images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg",
+    ],
+  },
+  {
+    title: "Project, City and state",
+    description: "This project was made using Python and Flask...",
+    images: [
+      "./images/justin-chrn-DaQcLTlz83k-unsplash.jpg",
+      "./images/jossuha-theophile-U2JgZnfAEBE-unsplash.jpg",
+      "./images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg",
+    ],
+  },
+];
 
-  carousel.addEventListener("mousedown", (e) => {
-    isDown = true;
-    carousel.classList.add("active");
-    startX = e.pageX - carousel.offsetLeft;
-    scrollLeft = carousel.scrollLeft;
-  });
+let currentProject = 0;
+let currentImage = 0;
 
-  carousel.addEventListener("mouseleave", () => {
-    isDown = false;
-    carousel.classList.remove("active");
-  });
+const slideshowImage = document.getElementById("slideshow-image");
+const projectTitle = document.getElementById("project-title");
+const projectText = document.getElementById("project-text");
 
-  carousel.addEventListener("mouseup", () => {
-    isDown = false;
-    carousel.classList.remove("active");
-  });
+function showProject(index) {
+  currentProject = index;
+  currentImage = 0;
+  updateContent();
+  startSlideshow();
+}
 
-  carousel.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - carousel.offsetLeft;
-    const walk = (x - startX) * 2;
-    carousel.scrollLeft = scrollLeft - walk;
-  });
-});
+function updateContent() {
+  projectTitle.textContent = projects[currentProject].title;
+  projectText.textContent = projects[currentProject].description;
+  slideshowImage.src = projects[currentProject].images[currentImage];
+}
+
+function startSlideshow() {
+  clearInterval(slideshowInterval);
+  slideshowInterval = setInterval(() => {
+    currentImage = (currentImage + 1) % projects[currentProject].images.length;
+    slideshowImage.src = projects[currentProject].images[currentImage];
+  }, 3000);
+}
+
+// Initialize
+let slideshowInterval;
+startSlideshow();
+
+const urlParams = new URLSearchParams(window.location.search);
+const projectIndex = parseInt(urlParams.get("project"), 10);
+showProject(projectIndex);
+// Update the content based on the selected project
+const project = projects[projectIndex];
+if (project) {
+  document.getElementById("project-title").textContent = project.title;
+  document.getElementById("project-description").textContent =
+    project.description;
+  document.getElementById("project-image").src = project.image;
+} else {
+  document.body.innerHTML = "<h1>Project not found</h1>";
+}

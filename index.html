@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-    <title>Premium Brand</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Enhance Architecture</title>
   </head>
   <body>
     <nav class="navbar">
@@ -18,7 +23,7 @@
       </div>
     </nav>
 
-    <section class="hero">
+    <section class="hero" onclick="redirectToProject(1)">
       <div class="hero-content">
         <h1 class="hero-title">Elevate Your Experience</h1>
         <p class="hero-subtitle">Discover premium solutions tailored for you</p>
@@ -33,36 +38,42 @@
         <img
           src="./images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg"
           alt="Carousel Image 1"
+          onclick="redirectToProject(0)"
         />
       </div>
       <div class="carousel-item">
         <img
           src="./images/fotis-fotopoulos--R_LZNfPeWM-unsplash.jpg"
           alt="Carousel Image 2"
+          onclick="redirectToProject(1)"
         />
       </div>
       <div class="carousel-item">
         <img
           src="./images/jossuha-theophile-G5X-2Ih7WrE-unsplash.jpg"
           alt="Carousel Image 3"
+          onclick="redirectToProject(2)"
         />
       </div>
       <div class="carousel-item">
         <img
           src="./images/jossuha-theophile-U2JgZnfAEBE-unsplash.jpg"
           alt="Carousel Image 4"
+          onclick="redirectToProject(3)"
         />
       </div>
       <div class="carousel-item">
         <img
           src="./images/justin-chrn-DaQcLTlz83k-unsplash.jpg"
           alt="Carousel Image 5"
+          onclick="redirectToProject(4)"
         />
       </div>
       <div class="carousel-item">
         <img
           src="./images/rui-alves-hn05nEBEOKU-unsplash.jpg"
           alt="Carousel Image 6"
+          onclick="redirectToProject(5)"
         />
       </div>
     </section>
@@ -72,6 +83,7 @@
           <img
             src="./images/rui-alves-hn05nEBEOKU-unsplash.jpg"
             alt="Left Image"
+            onclick="redirectToProject(3)"
           />
         </div>
         <div class="section-text">
@@ -91,6 +103,7 @@
           <img
             src="./images/victor-wJ4kpIZOjtE-unsplash.jpg"
             alt="Right Image"
+            onclick="redirectToProject(0)"
           />
         </div>
         <div class="section-text">
@@ -139,5 +152,12 @@
         </div>
       </div>
     </footer>
+    <script src="script.js" defer></script>
+    <script>
+      function redirectToProject(projectIndex) {
+        // Redirect to the projects page with the project index in the URL
+        window.location.href = `projects.html?project=${projectIndex}`;
+      }
+    </script>
   </body>
 </html>
