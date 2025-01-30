@@ -101,3 +101,32 @@ if (project) {
 } else {
   document.body.innerHTML = "<h1>Project not found</h1>";
 }
+
+function openSearch() {
+  document.getElementById("searchOverlay").style.display = "flex";
+}
+
+function closeSearch() {
+  document.getElementById("searchOverlay").style.display = "none";
+}
+
+// Close overlay when clicking outside the search container
+window.onclick = function (event) {
+  const overlay = document.getElementById("searchOverlay");
+  if (event.target === overlay) {
+    closeSearch();
+  }
+};
+
+// Add this to your JavaScript file
+const searchTrigger = document.querySelector(".search-trigger"); // Add this class to your search button
+const overlay = document.querySelector(".overlay");
+const closeBtn = document.querySelector(".close-btn");
+
+searchTrigger.addEventListener("click", () => {
+  overlay.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  overlay.classList.remove("active");
+});

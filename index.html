@@ -4,39 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-<<<<<<< HEAD
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
       rel="stylesheet"
     />
-    <title>Enhance Architecture</title>
-=======
-    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
     <title>Enhance</title>
->>>>>>> 9152e5b27b774aaa8483e8f2fdd4c13d7c4845f2
   </head>
   <body>
     <nav class="navbar">
       <div class="logo">Enhance</div>
       <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a onclick="openSearch()"
+          ><img src="./images/nav-icon.png" alt="an office building"
+        /></a>
       </div>
     </nav>
 
-    <section class="hero" onclick="redirectToProject(1)">
-      <div class="hero-content">
-        <h1 class="hero-title">Elevate Your Experience</h1>
-        <p class="hero-subtitle">Discover premium solutions tailored for you</p>
-        <div>
-          <!-- <img class="hero-image" src="./images/hero.jpg" alt="Hero Image" /> -->
+    <div id="searchOverlay" class="overlay">
+      <span class="close-btn" onclick="closeSearch()">&times;</span>
+      <div class="search-container">
+        <svg
+          class="search-arrow-svg top-icon"
+          xmlns="http://www.w3.org/200/svg"
+          viewBox="0 0 100 100"
+        >
+          <path
+            d="M10 30 L50 70 L90 30"
+            stroke="#a2a2a2"
+            stroke-width="10"
+            fill="none"
+          />
+        </svg>
+        <div class="search-input-container-flex">
+          <svg
+            class="search-arrow-svg right-icon"
+            xmlns="http://www.w3.org/200/svg"
+            viewBox="0 0 100 100"
+          >
+            <path
+              d="M10 30 L50 70 L90 30"
+              stroke="#a2a2a2"
+              stroke-width="10"
+              fill="none"
+            />
+          </svg>
+          <input type="text" class="search-input" placeholder="Search..." />
+          <svg
+            class="search-arrow-svg left-icon"
+            xmlns="http://www.w3.org/200/svg"
+            viewBox="0 0 100 100"
+          >
+            <path
+              d="M10 30 L50 70 L90 30"
+              stroke="#a2a2a2"
+              stroke-width="10"
+              fill="none"
+            />
+          </svg>
         </div>
+        <svg
+          class="search-arrow-svg bottom-icon"
+          xmlns="http://www.w3.org/200/svg"
+          viewBox="0 0 100 100"
+        >
+          <path
+            d="M10 30 L50 70 L90 30"
+            stroke="#a2a2a2"
+            stroke-width="10"
+            fill="none"
+          />
+        </svg>
       </div>
-    </section>
+    </div>
+
+    <div class="image-container">
+      <img src="./images/hero.jpg" alt="Scented Candles" />
+      <div class="text-overlay">
+        <h2>Unleash the glow within✨</h2>
+        <p>Scented Candles | Soaps Handmade and Organic</p>
+      </div>
+    </div>
 
     <section class="carousel">
       <div class="carousel-item">
@@ -82,46 +139,39 @@
         />
       </div>
     </section>
-    <section class="section">
-      <div class="section-content">
-        <div class="section-image">
-          <img
-            src="./images/rui-alves-hn05nEBEOKU-unsplash.jpg"
-            alt="Left Image"
-            onclick="redirectToProject(3)"
-          />
+
+    <div class="container-i">
+      <div class="section-i">
+        <div class="content">
+          <h1>Welcome to Our Website</h1>
+          <p>what are you going to do?</p>
         </div>
-        <div class="section-text">
-          <h2>Discover Innovation</h2>
-          <p>
-            Experience cutting-edge technology that enhances your workflow. Our
-            solutions are designed to drive success and inspire creativity.
-          </p>
+        <div class="image">
+          <a href="https://imgbb.com/">
+            <img
+              src="./images/rui-alves-hn05nEBEOKU-unsplash.jpg"
+              alt="Screenshot-2024-06-26-233720"
+            />
+          </a>
         </div>
       </div>
-    </section>
-
-    <!-- Section 2: Right Image, Left Text -->
-    <section class="section">
-      <div class="section-content reverse">
-        <div class="section-image">
-          <img
-            src="./images/victor-wJ4kpIZOjtE-unsplash.jpg"
-            alt="Right Image"
-            onclick="redirectToProject(0)"
-          />
+    </div>
+    <div class="container-i">
+      <div class="section-t">
+        <div class="content">
+          <h1>Welcome to Our Website</h1>
+          <p>what are you going to do?</p>
         </div>
-        <div class="section-text">
-          <h2>Empower Your Business</h2>
-          <p>
-            Seamlessly integrate our tools into your operations and watch your
-            productivity soar to new heights.
-          </p>
+        <div class="image">
+          <a href="images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg">
+            <img
+              src="./images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg"
+              alt="Screenshot-2024-06-26-233720"
+            />
+          </a>
         </div>
       </div>
-    </section>
-
-    <!-- Section 3: 4x4 Grid -->
+    </div>
     <section class="grid-section">
       <h2>Our Features</h2>
       <div class="grid">
@@ -160,7 +210,6 @@
     <script src="script.js" defer></script>
     <script>
       function redirectToProject(projectIndex) {
-        // Redirect to the projects page with the project index in the URL
         window.location.href = `projects.html?project=${projectIndex}`;
       }
     </script>
