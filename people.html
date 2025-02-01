@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="people.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>People</title>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Left Sidebar -->
+			<aside class="sidebar">
+				<a href="index.html"><h2>Enhance</h2></a>
+				<ul>
+					<li onclick="showProject(0)">Hyderabad</li>
+					<li onclick="showProject(1)">Vijayawada</li>
+					<li onclick="showProject(2)">Vizag</li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="people.html">People</a></li>
+				</ul>
+			</aside>
+			<div class="overlay" id="overlay">
+				<div class="overlay-content">
+					<img id="overlay-image" src="" alt="Person Image" />
+					<h2 id="overlay-name"></h2>
+					<h4 id="overlay-designation"></h4>
+					<p id="overlay-about"></p>
+					<button class="close-btn" onclick="closeOverlay()">Close</button>
+				</div>
+			</div>
+			<!-- Right Content -->
+			<div class="content">
+				<h1>People at the Organization</h1>
+				<div class="image-grid">
+					<div class="people-images-item">
+						<div class="person">
+							<img
+								onclick="overlayPeople()"
+								src="./images/fotis-fotopoulos--R_LZNfPeWM-unsplash.jpg"
+								alt="Person 1"
+							/>
+						</div>
+						<div class="person">
+							<img
+								onclick="overlayPeople()"
+								src="./images/jossuha-theophile-U2JgZnfAEBE-unsplash.jpg"
+								alt="Person 2"
+							/>
+						</div>
+						<div class="person">
+							<img
+								onclick="overlayPeople()"
+								src="./images/justin-chrn-DaQcLTlz83k-unsplash.jpg"
+								alt="Person 3"
+							/>
+						</div>
+					</div>
+					<!-- Add more people as needed -->
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

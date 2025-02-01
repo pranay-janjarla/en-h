@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Bricolage Grotesque", serif;
+}
+
+.container {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+}
+
+.content {
+	flex: 1;
+	width: 100vw;
+	height: 100vh;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.image-grid {
+	width: 100vw;
+	height: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	height: 200px;
+	width: 200px;
+	max-width: 200px;
+	max-height: 200px;
+}
+
+.image-grid .person {
+	text-align: center;
+}
+
+.image-grid img {
+	width: 200px;
+	padding: 10px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 15px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.image-grid img:hover {
+	transform: scale(0.975);
+	filter: saturate(0);
+}
+.people-images-item {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	height: 200px;
+	max-height: 300px;
+}
+
+h1 {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+	color: rgb(40, 40, 40);
+}
+
+.sidebar {
+	width: 250px;
+	background-color: #a2a2a21f;
+	color: rgb(0, 0, 0);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sidebar h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.sidebar ul {
+	list-style: none;
+	width: 100%;
+}
+
+.sidebar li {
+	padding: 12px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.sidebar li:hover {
+	background-color: #333;
+	border-radius: 5px;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+.overlay-content {
+	background-color: white;
+	width: 80%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.overlay img {
+	max-width: 100%;
+	max-height: 60%;
+	border-radius: 10px;
+}
+.close-btn {
+	cursor: pointer;
+	margin-top: 20px;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+}
