@@ -22,7 +22,7 @@
   </head>
   <body>
     <nav class="navbar">
-      <div class="logo">Enhance</div>
+      <a href=""><div class="logo">Enhance</div></a>
       <div class="nav-links">
         <a onclick="openSearch()"
           ><img src="./images/nav-icon.png" alt="an office building"
@@ -130,14 +130,35 @@
       </div>
     </section>
 
+    <h2 class="projects-title-landing-page">
+      Some branding lines for visual appeal
+    </h2>
+    <br style="background-color: rgb(28, 28, 28)" />
+
     <div class="container-i">
       <div class="section-i">
-        <div class="content">
-          <h1>Welcome to Our Website</h1>
-          <p>what are you going to do?</p>
-        </div>
         <div class="image">
-          <a href="https://imgbb.com/">
+          <a href="" onclick="redirectToProject(0)">
+            <img
+              src="./images/rui-alves-hn05nEBEOKU-unsplash.jpg"
+              alt="Screenshot-2024-06-26-233720"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="section-i">
+        <div class="image">
+          <a href="" onclick="redirectToProject(0)">
+            <img
+              src="./images/rui-alves-hn05nEBEOKU-unsplash.jpg"
+              alt="Screenshot-2024-06-26-233720"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="section-i">
+        <div class="image">
+          <a href="" onclick="redirectToProject(1)">
             <img
               src="./images/rui-alves-hn05nEBEOKU-unsplash.jpg"
               alt="Screenshot-2024-06-26-233720"
@@ -147,22 +168,50 @@
       </div>
     </div>
     <div class="container-i">
-      <div class="section-t">
-        <div class="content">
-          <h1>Welcome to Our Website</h1>
-          <p>what are you going to do?</p>
-        </div>
+      <div class="section-i">
         <div class="image">
-          <a href="images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg">
+          <a href="" onclick="redirectToProject(2)">
             <img
-              src="./images/baptiste-merel-ddYN_sypNOQ-unsplash.jpg"
+              src="./images/rui-alves-hn05nEBEOKU-unsplash.jpg"
+              alt="Screenshot-2024-06-26-233720"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="section-i">
+        <div class="image">
+          <a href="" onclick="redirectToProject(4)">
+            <img
+              src="./images/rui-alves-hn05nEBEOKU-unsplash.jpg"
+              alt="Screenshot-2024-06-26-233720"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="section-i">
+        <div class="image">
+          <a href=" " onclick="redirectToProject(2)">
+            <img
+              src="./images/rui-alves-hn05nEBEOKU-unsplash.jpg"
               alt="Screenshot-2024-06-26-233720"
             />
           </a>
         </div>
       </div>
     </div>
-    <section class="grid-section">
+
+    <div class="bottom-navigation-div">
+      <div class="projects-down-arrow">
+        <a href=""
+          ><img
+            src="./images/Screenshot 2025-01-31 191040-Photoroom.png"
+            alt=""
+            onclick="redirectToProject(5)"
+        /></a>
+      </div>
+    </div>
+
+    <!-- <section class="grid-section">
       <h2>Our Features</h2>
       <div class="grid">
         <div class="grid-item">Bold Designs</div>
@@ -196,7 +245,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <script src="script.js" defer></script>
     <script>
       function redirectToProject(projectIndex) {
